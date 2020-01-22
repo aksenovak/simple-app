@@ -3,7 +3,50 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_URL: 'https://stage.legaladviceme.com/api/',
+  questions: {
+    entities: 'questions',
+    defaultQuery: {
+      sortBy: 'date:desc',
+      perPage: '10',
+      page: 1,
+    },
+    query: {
+      sortBy: 'date:desc',
+      perPage: '10',
+      page: 1,
+    }
+  },
+  articles: {
+    entities: 'articles',
+    defaultQuery: {
+      sortBy: 'date:desc',
+      perPage: '10',
+      page: 1,
+    },
+    query: {
+      sortBy: 'date:desc',
+      perPage: '10',
+      page: 1,
+    }
+  },
+  filtersData: {
+    perPageFilter:
+      [
+        {id: 1, value: '10'},
+        {id: 2, value: '20'},
+        {id: 3, value: '50'},
+        {id: 4, value: '100'},
+      ],
+    sortByFilter:
+      [
+        {id: 1, value: 'Date (newest first)', query: 'date:desc'},
+        {id: 2, value: 'Date (oldest first)', query: 'date:asc'},
+        {id: 3, value: 'Views (999-0)', query: 'views:desc'},
+        {id: 4, value: 'Views (0-999)', query: 'views:asc'},
+      ]
+  }
 };
 
 /*

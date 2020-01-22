@@ -1,0 +1,28 @@
+<div>
+  <div class="block-inline">
+    <label for="sortByFilter">Sort by</label>
+    <select id="sortByFilter" [(ngModel)]="query.sortBy" (ngModelChange)="requestListWithFilters.emit()">
+      <option *ngFor="let sortBy of sortByFilter; let i = index;"
+              [attr.data-index]="i"
+              value="{{sortBy.query}}"
+              [innerText]="sortBy.value"></option>
+    </select>
+  </div>
+  <div class="block-inline">
+    <label for="perPageFilter">Per page</label>
+    <select id="perPageFilter" [(ngModel)]="query.perPage" (ngModelChange)="requestListWithFilters.emit()">
+      <option *ngFor="let perPage of perPageFilter; let i = index;"
+              [attr.data-index]="i"
+              value="{{perPage.value}}"
+              [innerText]="perPage.value"></option>
+    </select>
+  </div>
+  <div class="block-inline">
+    <label>Pagination</label>
+    <div>
+      <button [disabled]="query.page === 1" (click)="updatePageCount(false)"><</button>
+      <span [innerText]="query.page"></span>
+      <button (click)="updatePageCount(true)">></button>
+    </div>
+  </div>
+</div>

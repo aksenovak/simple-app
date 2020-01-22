@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.block-inline {
+  display: inline-block;
+  padding-left: 10px;
+
+  label {
+    margin-right: 10px;
+  }
+
+  div {
+    button {
+      cursor: pointer;
+    }
+
+    button:first-child {
+      margin-right: 10px;
+    }
+
+    button:last-child {
+      margin-left: 10px;
+    }
+  }
+}
+
+.links {
+  a {
+    margin-right: 10px;
+  }
+}
+
+.listClass {
+  list-style: none;
+  li {
+    text-decoration: underline;
+  }
+}

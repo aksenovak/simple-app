@@ -1,0 +1,7 @@
+<div>
+  <ul [ngClass]="currentListClass">
+    <li *ngFor="let item of list; let i = index;" [attr.data-index]="i">
+      <p [innerText]="item.title"></p>
+    </li>
+  </ul>
+</div>
